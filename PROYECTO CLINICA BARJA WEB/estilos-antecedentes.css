@@ -1,0 +1,143 @@
+        /* estilos.css */
+        /* Reset básico y configuración general */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .contenedor {
+            width: 100%;
+            max-width: 900px;
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h1 a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+            color: #004b8d;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        h1 a:hover {
+            color: #1c5980;
+        }
+        
+        h2 {
+            color: #0077cc;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        /* Sección */
+        
+        .seccion {
+            margin-bottom: 30px;
+        }
+        /* Formulario general */
+        
+        .formulario {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px 25px;
+        }
+        /* Etiquetas y campos */
+        
+        label {
+            display: flex;
+            flex-direction: column;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #222;
+        }
+        /* Inputs y textarea */
+        
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            margin-top: 6px;
+            padding: 8px 12px;
+            border: 1.8px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        input[readonly] {
+            background-color: #e9ecef;
+            color: #555;
+            cursor: not-allowed;
+        }
+        /* Cuando el usuario enfoca un campo editable */
+        
+        input[type="text"]:not([readonly]):focus,
+        input[type="date"]:focus,
+        textarea:focus {
+            border-color: #0077cc;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0, 119, 204, 0.3);
+        }
+        /* Textareas más altos para campos extensos */
+        
+        textarea {
+            min-height: 80px;
+        }
+        /* Botones */
+        
+        button {
+            grid-column: span 2;
+            padding: 12px 18px;
+            background-color: #0077cc;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
+            font-weight: 600;
+            margin-top: 10px;
+            align-self: start;
+        }
+        
+        button:hover {
+            background-color: #005fa3;
+        }
+        
+        .seccion-buscar {
+            text-align: center;
+        }
+        
+        .seccion-buscar a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            background-color: #0077cc;
+            font-size: 1.1rem;
+        }

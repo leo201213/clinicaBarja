@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Historia Clínica - Centro Médico Barja</title>
+    <link rel="stylesheet" href="estilos-historia.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>
+            <a href="panel.html">Centro Médico Barja</a>
+        </h1>
+        <h2>Búsqueda de Historia Clínica</h2>
+        <input type="text" id="busquedaPaciente" placeholder="Buscar por N° de paciente o apellidos" />
+        <button id="btnBuscar">Buscar</button>
+
+        <div id="resultadoBusqueda" style="margin-top: 20px;"></div>
+        <form id="formHistoriaClinica">
+
+            <label for="pacienteNro">Paciente Nº (único):</label>
+            <input type="text" id="pacienteNro" name="pacienteNro" required />
+
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required />
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required />
+
+            <label for="domicilio">Domicilio:</label>
+            <input type="text" id="domicilio" name="domicilio" />
+
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+      <option value="">Seleccione</option>
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+    </select>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required />
+
+            <label for="lugarNacimiento">Lugar de Nacimiento:</label>
+            <input type="text" id="lugarNacimiento" name="lugarNacimiento" />
+
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad" readonly />
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" step="0.01" />
+
+            <label for="talla">Talla (cm):</label>
+            <input type="number" id="talla" name="talla" step="0.1" />
+
+            <label for="antecedentesObstetricos">Antecedentes Obstétricos:</label>
+            <textarea id="antecedentesObstetricos" name="antecedentesObstetricos"></textarea>
+
+            <label for="antecedentesPatologicos">Antecedentes Patológicos:</label>
+            <textarea id="antecedentesPatologicos" name="antecedentesPatologicos"></textarea>
+
+            <label for="examenFisico">Examen Físico:</label>
+            <textarea id="examenFisico" name="examenFisico"></textarea>
+
+            <label for="laboratorio">Laboratorio:</label>
+            <textarea id="laboratorio" name="laboratorio"></textarea>
+
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" name="diagnostico"></textarea>
+
+            <label for="tratamiento">Tratamiento:</label>
+            <textarea id="tratamiento" name="tratamiento"></textarea>
+
+            <label for="telefonoReferencia">Teléfono de Referencia:</label>
+            <input type="tel" id="telefonoReferencia" name="telefonoReferencia" />
+
+            <label>
+      <input type="checkbox" id="seguro" name="seguro" />
+      Tiene Seguro
+    </label>
+
+            <div id="datosSeguro" style="display:none; margin-left: 20px;">
+                <label for="codigoAsegurado">Código Asegurado:</label>
+                <input type="text" id="codigoAsegurado" name="codigoAsegurado" />
+
+                <label for="empresaAseguradora">Empresa Aseguradora:</label>
+                <input type="text" id="empresaAseguradora" name="empresaAseguradora" />
+            </div>
+
+            <button type="submit">Guardar Historia Clínica</button>
+
+        </form>
+        <hr />
+        <h3>Importar Pacientes desde Excel</h3>
+        <input type="file" id="archivoExcel" accept=".xlsx, .xls" />
+        <button id="btnImportar">Importar Datos</button>
+
+        <script type="module" src="historia.js"></script>
+    </div>
+</body>
+
+</html>

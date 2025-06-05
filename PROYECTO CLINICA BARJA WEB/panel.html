@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panel Principal - Centro Médico Barja</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+    <div class="panel-contenedor">
+        <h2>Bienvenido(a), <span id="usuario-nombre"></span></h2>
+        <p>Rol: <span id="usuario-rol"></span></p>
+
+        <div class="botones">
+            <button onclick="window.location.href='historia.html'">Historia Clínica</button>
+            <button onclick="window.location.href='antecedentes.html'">Antecedentes</button>
+        </div>
+
+        <!-- Sección solo para administrador -->
+        <div id="seccion-admin" style="display: none; margin-top: 20px;">
+            <h3>Opciones de Administración</h3>
+            <button onclick="alert('Agregar campos (solo administrador)')">Agregar Campos</button>
+            <button onclick="alert('Eliminar campos (solo administrador)')">Eliminar Campos</button>
+        </div>
+
+        <button id="cerrar-sesion" style="margin-top: 30px;">Cerrar sesión</button>
+    </div>
+
+    <script type="module" src="panel.js"></script>
+</body>
+
+</html>

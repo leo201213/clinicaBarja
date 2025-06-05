@@ -1,0 +1,195 @@
+/* Reset básico y configuración general */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* Contenedor principal */
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Títulos principales */
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #004b8d;
+    font-weight: 700;
+}
+
+h1 a:hover {
+    color: #1c5980;
+}
+
+h2 {
+    text-align: center;
+    color: #0077cc;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+
+/* Sección */
+
+.seccion {
+    margin-bottom: 30px;
+}
+
+
+/* Formulario de búsqueda */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.formulario label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px;
+    border: 1.8px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 119, 204, 0.3);
+}
+
+
+/* Botón de búsqueda */
+
+button {
+    padding: 12px 18px;
+    background-color: #0077cc;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+
+/* Resultados centrados y bien presentados */
+
+#resultados {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #e9f2fc;
+    border: 1px solid #0077cc;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/* Detalle del antecedente centrado y con estilo */
+
+#detalleAntecedente {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #b3d4fc;
+    text-align: center;
+}
+
+#detalleAntecedente h3 {
+    color: #004b8d;
+    margin-bottom: 15px;
+}
+
+#detalleContenido {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Estilo para cada línea de contenido del detalle */
+
+#detalleContenido div {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+
+/* Botón PDF centrado */
+
+#descargarPDF {
+    margin-top: 20px;
+    background-color: #28a745;
+}
+
+#descargarPDF:hover {
+    background-color: #218838;
+}
+
+
+/* Responsividad para celulares */
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 20px;
+    }
+    input[type="text"] {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+    #detalleContenido {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Antecedentes - Centro Médico Barja</title>
+    <link rel="stylesheet" href="estilo-buscar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>
+            <a href="panel.html">Centro Médico Barja</a>
+        </h1>
+        <h2>Buscar Antecedentes</h2>
+
+        <section class="seccion">
+            <div class="formulario">
+                <label for="busqueda">Buscar por Nro de Paciente o Apellido:</label>
+                <input type="text" id="busqueda" placeholder="Ej: 123 o Pérez" />
+                <button id="buscarBtn">Buscar</button>
+            </div>
+
+            <div id="resultados"></div>
+        </section>
+
+        <section class="seccion" id="detalleAntecedente" style="display: none;">
+            <h3>Detalle del Antecedente</h3>
+            <div id="detalleContenido"></div>
+            <button id="eliminarAntecedente" style="background-color: #dc3545;">🗑 Eliminar Antecedente</button>
+            <button id="descargarPDF">Descargar PDF</button>
+        </section>
+    </div>
+
+    <script src="buscar-antecedentes.js"></script>
+</body>
+
+</html>

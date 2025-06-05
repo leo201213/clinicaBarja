@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+.login-container img {
+    width: 320px;
+    height: 250px;
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #004b8d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #005fa3;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/*panel*/
+
+.panel-contenedor {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.botones button {
+    margin: 10px 15px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #0078d4;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.botones button:hover {
+    background-color: #083f81;
+}
+
+#seccion-admin button {
+    margin: 8px 10px;
+    padding: 10px 18px;
+    font-size: 14px;
+    background-color: #e50f07;
+}
+
+#seccion-admin button:hover {
+    background-color: #d1423d;
+}
+
+#cerrar-sesion {
+    background-color: #05d4cd;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#cerrar-sesion:hover {
+    background-color: #bb2e1b;
+    transition: 0.3s;
+}

@@ -1,0 +1,270 @@
+/* estilos-historia.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #004b8d;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+h1 a:hover {
+    color: #1c5980;
+}
+
+h2 {
+    color: #0077cc;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#busquedaPaciente,
+#btnBuscar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#busquedaPaciente {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    margin-bottom: 10px;
+}
+
+#btnBuscar {
+    text-transform: uppercase;
+    padding: 10px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+#btnBuscar:hover {
+    background-color: #0056b3;
+}
+
+#resultadoBusqueda {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.resultado-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.resultado-info {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-eliminar {
+    padding: 6px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #a71d2a;
+}
+
+form#formHistoriaClinica {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form#formHistoriaClinica label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 15px;
+}
+
+form#formHistoriaClinica input[type="text"],
+form#formHistoriaClinica input[type="date"],
+form#formHistoriaClinica input[type="number"],
+form#formHistoriaClinica input[type="tel"],
+form#formHistoriaClinica select,
+form#formHistoriaClinica textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #2c3e50;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+form#formHistoriaClinica input[type="text"]:focus,
+form#formHistoriaClinica input[type="date"]:focus,
+form#formHistoriaClinica input[type="number"]:focus,
+form#formHistoriaClinica input[type="tel"]:focus,
+form#formHistoriaClinica select:focus,
+form#formHistoriaClinica textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+form#formHistoriaClinica input[readonly] {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+form#formHistoriaClinica textarea {
+    min-height: 70px;
+}
+
+form#formHistoriaClinica button[type="submit"] {
+    margin-top: 25px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form#formHistoriaClinica button[type="submit"]:hover {
+    background-color: #1c5980;
+}
+
+
+/* Checkbox y div que muestra los datos de seguro */
+
+form#formHistoriaClinica label>input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#datosSeguro {
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #2980b9;
+}
+
+
+/* Contenedor del importador Excel */
+
+#archivoExcel {
+    margin: 10px auto 20px;
+    padding: 10px;
+    border: 2px dashed #28a745;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+
+#btnImportar {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto 40px;
+}
+
+#btnImportar:hover {
+    background-color: #1e7e34;
+}
+
+
+/* Responsive para pantallas pequeñas */
+
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    #busquedaPaciente {
+        width: 90%;
+    }
+    form#formHistoriaClinica {
+        padding: 20px;
+        width: 100%;
+    }
+    #archivoExcel {
+        max-width: 100%;
+    }
+}

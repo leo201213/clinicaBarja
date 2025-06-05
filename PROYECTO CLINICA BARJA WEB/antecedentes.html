@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecedentes - Centro Médico Barja</title>
+    <link rel="stylesheet" href="estilos-antecedentes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>
+            <a href="panel.html">Centro Medico Barja</a>
+        </h1>
+        <h2>Registro de Antecedentes</h2>
+
+        <!-- Sección 1: Datos de Historia Clínica -->
+        <section class="seccion">
+            <h2>Datos del Paciente</h2>
+            <div class="formulario">
+                <label>Nro de Paciente:
+          <input type="text" id="nroPaciente" placeholder="Buscar por código...">
+        </label>
+                <label>Nombres:
+          <input type="text" id="nombres" readonly>
+        </label>
+                <label>Apellidos:
+          <input type="text" id="apellidos" readonly>
+        </label>
+                <label>Sexo:
+          <input type="text" id="sexo" readonly>
+        </label>
+                <label>Fecha de Nacimiento:
+          <input type="text" id="fechaNacimiento" readonly>
+        </label>
+                <label>Edad:
+          <input type="text" id="edad" readonly>
+        </label>
+                <label>Peso Inicial:
+          <input type="text" id="pesoInicial" readonly>
+        </label>
+                <label>Talla Inicial:
+          <input type="text" id="tallaInicial" readonly>
+        </label>
+                <label>Antecedentes Obstétricos:
+          <textarea id="antecedentesObstetricos" readonly></textarea>
+        </label>
+                <label>Antecedentes Patológicos:
+          <textarea id="antecedentesPatologicos" readonly></textarea>
+        </label>
+            </div>
+        </section>
+
+        <!-- Sección 2: Registro de Expediente Médico -->
+        <section class="seccion">
+            <h2>Registro del Expediente</h2>
+            <div class="formulario">
+                <label>Expediente Nro:
+          <input type="text" id="expedienteNro">
+        </label>
+                <label>Fecha Actual:
+          <input type="date" id="fechaActual">
+        </label>
+                <label>Peso Actual:
+          <input type="text" id="pesoActual">
+        </label>
+                <label>Talla Actual:
+          <input type="text" id="tallaActual">
+        </label>
+                <label>Edad Actual:
+          <input type="text" id="edadActual" readonly>
+        </label>
+                <label>Antecedentes Patológicos (actuales):
+          <textarea id="patologicosActuales"></textarea>
+        </label>
+                <label>Antecedentes de Enfermedad Actual:
+          <textarea id="enfermedadActual"></textarea>
+        </label>
+                <label>Examen Físico:
+          <textarea id="examenFisico"></textarea>
+        </label>
+                <label>Exámenes Complementarios:
+          <textarea id="examenComplementario"></textarea>
+        </label>
+                <label>Laboratorio:
+          <textarea id="laboratorio"></textarea>
+        </label>
+                <label>Diagnóstico:
+          <textarea id="diagnostico"></textarea>
+        </label>
+                <label>Tratamiento / Receta:
+          <textarea id="tratamiento"></textarea>
+        </label>
+                <label>Médico:
+          <input type="text" id="medico">
+        </label>
+                <button id="guardarExpediente">Guardar Expediente</button>
+            </div>
+        </section>
+
+        <!-- Sección de búsqueda de expediente -->
+        <section class="seccion-buscar">
+            <h2>Buscar Expediente</h2>
+            <button id="buscarExpediente"> <a href="buscar-antecedentes.html">Buscar</a></button>
+        </section>
+    </div>
+
+    <script src="antecedentes.js"></script>
+</body>
+
+</html>
