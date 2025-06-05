@@ -27,7 +27,7 @@ async function cargarSesion() {
 
         if (!sesionSnap.exists()) {
             alert("No hay sesión activa. Por favor, inicia sesión.");
-            window.location.href = "login.html";
+            window.location.href = "index.html";
             return;
         }
 
@@ -44,7 +44,7 @@ async function cargarSesion() {
     } catch (error) {
         console.error("Error al cargar sesión:", error);
         alert("Error al cargar sesión. Intenta iniciar sesión nuevamente.");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 }
 
@@ -52,7 +52,7 @@ async function cargarSesion() {
 async function cerrarSesion() {
     try {
         await deleteDoc(doc(db, "sesion_activa", "actual"));
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     } catch (error) {
         console.error("Error al cerrar sesión:", error);
         alert("Error al cerrar sesión, intenta nuevamente.");
